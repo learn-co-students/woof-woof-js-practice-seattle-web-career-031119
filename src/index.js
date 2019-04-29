@@ -62,18 +62,16 @@ function displayDog(dog) {
 }
 
 function changeGoodBad(ev, dog) {
-  console.log('change:', dog)
+  console.log('dog:', dog)
   const div = document.getElementById('dog-info')
   const button = div.getElementsByClassName('good-bad-btn')
   let demeanor = null
 
   if (ev.target.textContent === "Good Dog!") {
     demeanor = false;
-    console.log(demeanor)
     ev.target.textContent = "Bad Dog!"
   } else {
     demeanor = true;
-    console.log(demeanor)
     ev.target.textContent = "Good Dog!"
   }
   console.log('outside', demeanor)
@@ -90,6 +88,23 @@ function changeGoodBad(ev, dog) {
   })
 }
 
+function clickFilter() {
+  const filter = document.getElementById('good-dog-filter')
+  console.log('filter:', filter)
 
+  filter.addEventListener('click', (ev) => {
+    filterDogs(ev)
+  })
+
+}
+
+function filterDogs(ev) {
+  if (ev.target.textContent === "Filter good dogs: OFF") {
+    ev.target.textContent = "Filter good dogs: ON"
+  } else {
+    ev.target.textContent = "Filter good dogs: OFF"
+  }
+}
 
 loadDogs()
+clickFilter()
