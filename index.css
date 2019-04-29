@@ -30,6 +30,8 @@
   align-items: center;
   border-radius: 2em;
   border: 1px solid blue;
+  background-color: white;
+  text-align: center;
 }
 
 #dog-summary-container {
