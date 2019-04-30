@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const DOG_URL = "http://localhost:3000/pups"
-	const DOGS = []
 
 	const DOG_BAR_DIV = document.getElementById('dog-bar')
 
